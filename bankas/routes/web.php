@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ClientController as CC;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,3 +23,9 @@ Route::get('/home', fn() => '<h1>Home</h1>');
 Auth::routes(); 
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::prefix('clients')->name('clients-')->group(function () {
+
+    Route::get('/create', [CC::class, 'create'])->name('create');
+    Route::post('/create', [CC::class, 'store'])->name('store');
+});
