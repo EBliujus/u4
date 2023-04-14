@@ -36,11 +36,11 @@
                                 Clients
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('clients-create') }}">
-                                    Add Client
+                                <a class="dropdown-item" href="{{ route('clients-index') }}">
+                                    Client List
                                 </a>
                                 <a class="dropdown-item" href="{{ route('clients-create') }}">
-                                    Client List
+                                    Add Client
                                 </a>
                             </div>
                         </li>
@@ -84,7 +84,7 @@
                 </div>
             </div>
         </nav>
-
+        @include('layouts.errors')
         <main class="py-4">
             @yield('content')
         </main>

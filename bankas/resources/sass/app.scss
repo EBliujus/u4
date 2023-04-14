@@ -6,3 +6,86 @@
 
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
+
+
+body{
+    background-color: #65BF92;
+}
+h1, th, td, .btn, .card-header, .card-body, .form-label {
+    color: #fff;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px #65BF92,
+                0 0 30px #65BF92,
+                0 0 50px #65BF92;
+}
+
+.card-header {
+    background: linear-gradient(225deg, #65BF92, #2D3F56);
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.card-body {
+    background: linear-gradient(225deg, #2D3F56, #65BF92);
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.list-group-item {
+    background: linear-gradient(225deg, #65BF92, #2D3F56);
+}
+
+.client-line {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    .client-info {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+.myg-container {
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 10px;
+    color: #2D3F56;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.add, .draw{
+    display: flex;
+    flex-direction: row;
+}
+.add-money, .withdraw-money{
+    padding: 15px;
+    width: 200px;
+}
+.add-btn{
+    margin-top: 45px;
+    margin-left: 25px;
+    height: 40px;
+    width: 75px;
+}
+.draw-btn {
+    margin-top: 45px;
+    margin-left: 25px;
+    height: 40px;
+    width: 95px;
+}
+.noAcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
