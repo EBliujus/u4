@@ -12,15 +12,19 @@
                     <form action="{{route('clients-update', $client)}}" method="POST">
                         <div class="mb-3">
                             <label class="form-label">Client Name</label>
-                            <input type="text" class="form-control" name="name" value="{{old('name', $client->name)}}" readonly>
+                            <input type="text" class="form-control" name="name" value="name">
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Client Surname</label>
-                            <input type="text" class="form-control" name="surname" value="{{old('surname', $client->surname)}}" readonly>
+                            <input type="text" class="form-control" name="surname" value="surname">
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Account Nr.</label>
-                            <input type="text" class="form-control" name="iban" value="{{old('iban', $client->iban)}}" readonly>
+                            <label hidden class="form-label">Account Nr.</label>
+                            <input hidden type="text" class="form-control" name="pid" value="{{old('pid', $client->pid)}}" readonly>
+                        </div>
+                        <div class="mb-3">
+                            <label hidden class="form-label">Account Nr.</label>
+                            <input hidden type="text" class="form-control" name="iban" value="{{old('iban', $client->iban)}}" readonly>
                         </div>
                         <div class="mb-3">
                             <label hidden class="form-label">Balance</label>

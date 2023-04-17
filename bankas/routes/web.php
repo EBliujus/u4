@@ -23,14 +23,17 @@ Route::get('/home', fn() => '<h1>Home</h1>');
 Auth::routes();
 Auth::routes(['register' => false]);
 
-Route::get('register', function() { return redirect(route('login'));
+Route::get('register', function() { 
+    
+    return redirect(route('login'));
+    
 });
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::prefix('clients')->name('clients-')->group(function () {
     
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/home', [CC::class, 'index'])->name('home');
     Route::get('/', [CC::class, 'index'])->name('index');   
     Route::get('/create', [CC::class, 'create'])->name('create');
     Route::post('/create', [CC::class, 'store'])->name('store');
