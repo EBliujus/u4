@@ -17,10 +17,10 @@
                     <tbody>
                       <tr>
                         <td>  {{ $clients }} </td>
-                        <td> 12 </td>
-                        <td> 123 </td>
-                        <td> 123 </td>
-                        <td> 1 </td>
+                        <td> {{$IBANs}} </td>
+                        <td> {{$totalBalance}} </td>
+                        <td> {{$maxBalance}} </td>
+                        <td> {{$avgBalance}}  </td>
                         <td> 0 </td>
                         <td> 0 </td>
                       </tr>

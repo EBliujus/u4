@@ -25,10 +25,18 @@ class HomeController extends Controller
     public function index()
     {
         $clients = Client::count();
-       
+        $IBANs = Client::count('iban');
+        $totalBalance = Client::sum('balance');
+        $maxBalance = Client::max('balance');
+        $avgBalance = number_format(Client::avg('balance'), 2);
+
         return view('home',
         [
-            'clients' => $clients
+            'clients' => $clients,
+            'IBANs' => $IBANs,
+            'totalBalance' => $totalBalance,
+            'maxBalance' => $maxBalance,
+            'avgBalance' => $avgBalance,
         ]);
     }
 }
