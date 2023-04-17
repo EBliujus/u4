@@ -23,8 +23,8 @@
                             <input type="text" class="form-control" name="iban" value="{{old('iban', $client->iban)}}" readonly>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Balance</label>
-                            <input type="text" class="form-control" name="balance" value="0" readonly>
+                            <label hidden class="form-label">Balance</label>
+                            <input hidden type="text" class="form-control" name="balance" value="0" readonly>
                         </div>
                         <button style="color:#fff "type="submit" class="btn btn-primary">Edit</button>
                         @csrf

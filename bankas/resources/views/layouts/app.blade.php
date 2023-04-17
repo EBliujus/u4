@@ -36,15 +36,41 @@
                                 Clients
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('clients-index') }}">
-                                    Client List
-                                </a>
                                 <a class="dropdown-item" href="{{ route('clients-create') }}">
                                     Add Client
+                                </a>
+                                <a class="dropdown-item" href="{{ route('clients-index') }}">
+                                    Clients List
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Edit Client
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Add Extra Account
                                 </a>
                             </div>
                         </li>
                     </ul>
+
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                Transactions
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="#">
+                                    Add Funds
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Withdraw Funds
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    Send Funds
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
@@ -84,6 +110,7 @@
                 </div>
             </div>
         </nav>
+        @include('layouts.messages')
         @include('layouts.errors')
         <main class="py-4">
             @yield('content')

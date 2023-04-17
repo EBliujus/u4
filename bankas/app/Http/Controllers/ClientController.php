@@ -77,9 +77,9 @@ class ClientController extends Controller
     public function update(Request $request, Client $client)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|min:3',
-            'surname' => 'required|min:3',
-            'pid' => 'required|integer|unique:clients,pid|min:11',
+            'name' => 'nullable|min:3',
+            'surname' => 'nullable|min:3',
+            'pid' => 'nullable|integer|unique:clients,pid|min:11',
         ]);
 
         if ($validator->fails()) {
