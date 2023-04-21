@@ -79,7 +79,7 @@ class ClientController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'nullable|min:3',
             'surname' => 'nullable|min:3',
-            'pid' => 'nullable|integer|unique:clients,pid|min:11',
+            'pid' => 'nullable|min:11',
         ]);
 
         if ($validator->fails()) {
@@ -96,7 +96,8 @@ class ClientController extends Controller
         $client->balance = 0;
         $client->save();
         return redirect()
-        ->route('clients-index');
+        ->route('clients-index')
+        ->with('info', 'Client info was updated');
     }
 
 

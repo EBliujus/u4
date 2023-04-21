@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientController as CC;
+use App\Http\Controllers\AccountsController as AC;
 
 /*
 |--------------------------------------------------------------------------
@@ -43,5 +44,18 @@ Route::prefix('clients')->name('clients-')->group(function () {
     Route::delete('/delete/{client}', [CC::class, 'destroy'])->name('delete');
     Route::put('/add-money/{client}', [CC::class, 'addMoney'])->name('add-money');
     Route::put('/withdraw-money/{client}', [CC::class, 'withdrawMoney'])->name('withdraw-money');
+
+});
+
+Route::prefix('accounts')->name('accounts-')->group(function () {
+    Route::get('/', [AC::class, 'index'])->name('index');   
+    Route::get('/create', [AC::class, 'create'])->name('create');
+    Route::post('/create', [AC::class, 'store'])->name('store');
+    Route::get('/{account}', [AC::class, 'show'])->name('show');
+    Route::get('/edit/{account}', [AC::class, 'edit'])->name('edit');
+    Route::put('/edit/{account}', [AC::class, 'update'])->name('update');
+    Route::delete('/delete/{account}', [AC::class, 'destroy'])->name('delete');
+    Route::put('/add-money/{account}', [AC::class, 'addMoney'])->name('add-money');
+    Route::put('/withdraw-money/{account}', [AC::class, 'withdrawMoney'])->name('withdraw-money');
 
 });

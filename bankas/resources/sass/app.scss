@@ -62,6 +62,11 @@ h1, th, td, .btn, .card-header, .card-body, .form-label {
     max-width: 1200px;
     margin: 0 auto;
 }
+.money-line {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .add, .draw{
     display: flex;
     flex-direction: row;

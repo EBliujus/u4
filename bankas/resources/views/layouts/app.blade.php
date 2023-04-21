@@ -42,30 +42,20 @@
                                 <a class="dropdown-item" href="{{ route('clients-index') }}">
                                     Clients List
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    Edit Client
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    Add Extra Account
-                                </a>
                             </div>
                         </li>
                     </ul>
-
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Transactions
+                                Accounts
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">
-                                    Add Funds
+                                <a class="dropdown-item" href="accounts-index">
+                                    Accounts List
                                 </a>
-                                <a class="dropdown-item" href="#">
-                                    Withdraw Funds
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    Send Funds
+                                <a class="dropdown-item" href="accounts-create">
+                                    New Account
                                 </a>
                             </div>
                         </li>
