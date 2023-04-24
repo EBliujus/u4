@@ -6,7 +6,7 @@
         <div class="col-12">
             <div class="card mt-5">
                 <div class="card-header">
-                    <h1>Clients accounts List</h1>
+                    <h1>Accounts List</h1>
                 </div>
                 <div class="card-body">
                     <table class="table">

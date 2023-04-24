@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
 
 class AccountsController extends Controller
 {
-
     public function index()
     {
         $accounts = accounts::all();
@@ -17,7 +16,6 @@ class AccountsController extends Controller
             'accounts' => $accounts
         ]);
     }
-
 
     public function create()
     {
@@ -27,17 +25,18 @@ class AccountsController extends Controller
         ]);
     }
 
-
     public function store(Request $request)
     {
+        $iban = 'LT' . rand(50,60) . 11000 . rand(10000000000,99999999999);  
         Accounts::create([
-            'iban' => $request->iban,
-            'balance' => $request->balance,
+            'iban' => $iban,
+            'balance' => 0,
             'client_id' => $request->client_id
         ]);
-        return redirect()->back();
+        return redirect()
+        ->route('accounts-create')
+        ->with('iban', $iban);
     }
-
 
     public function show(Accounts $accounts)
     {
@@ -49,12 +48,10 @@ class AccountsController extends Controller
         //
     }
 
-
     public function update(Request $request, Accounts $accounts)
     {
         //
     }
-
 
     public function destroy(Accounts $accounts)
     {

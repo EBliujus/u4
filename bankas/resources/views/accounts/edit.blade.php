@@ -9,7 +9,7 @@
                     <h1>Edit Client</h1>
                 </div>
                 <div class="card-body">
-                    <form action="{{route('clients-update', $client)}}" method="POST">
+                    <form action="{{route('accounts-update', $account)}}" method="POST">
                         <div class="mb-3">
                             <label class="form-label">Client Name</label>
                             <input type="text" class="form-control" name="name" value="{{ old('name', $client->name) }}">

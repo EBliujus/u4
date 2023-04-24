@@ -18,7 +18,7 @@
                 <td>{{ $client->name }} </td>
                 <td>{{ $client->surname }} </td>
                 <td>{{ $client->pid }} </td>
-                <td>{{ $client->iban }} </td>
+                <td>{{$client->iban }} </td>
                 <td>{{ $client->balance }} </td>
             </tr>
         </tbody>

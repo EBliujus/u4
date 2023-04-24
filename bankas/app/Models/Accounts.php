@@ -11,4 +11,9 @@ class Accounts extends Model
 
     protected $fillable = ['iban', 'balance', 'client_id'];
     // public $timestamps = false;
+    
+    public function accClient() 
+    {
+        return $this->belogsTo(Client::class, 'client_id', 'id');
+    }
 }
