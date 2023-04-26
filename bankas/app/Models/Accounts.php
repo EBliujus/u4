@@ -16,4 +16,8 @@ class Accounts extends Model
     {
         return $this->belogsTo(Client::class, 'client_id', 'id');
     }
+    public function client()
+    {
+        return $this->belongsTo(Client::class);
+    }
 }

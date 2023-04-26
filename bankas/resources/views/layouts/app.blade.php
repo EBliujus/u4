@@ -54,7 +54,7 @@
                                 <a class="dropdown-item" href="accounts-index">
                                     Accounts List
                                 </a>
-                                <a class="dropdown-item" href="accounts-create">
+                                <a class="dropdown-item" href="{{ route('accounts-create') }}">
                                     New Account
                                 </a>
                             </div>
